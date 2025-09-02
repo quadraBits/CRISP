@@ -1,0 +1,110 @@
+/*
+ * Qt Style Sheet
+ * Created: 07.07.2025
+ */
+
+QWidget#warningareas {
+    background-color: #f4f4f4;
+}
+
+QMainWindow {
+    border-image: url("fire.png");
+    border-repeat: no-repeat;
+    border-position: bottom;
+    background-color: #456982;
+}
+
+QMessageBox {
+    background-color: #f9f9f9;
+    color:#333333;
+}
+
+QScrollArea {
+    background-color: #f9f9f9;
+}
+
+QMenuBar {
+    background-color: #f9f9f9;
+    color:#333333;
+}
+
+QMenu {
+    background-color: #f9f9f9;
+    color:#333333;
+}
+
+ QPushButton {
+    background-color: #bfbfbf;
+    color:#333333;
+    font-weight: 600;
+    font: large "Aptos";
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #afafaf;
+    padding: 5px 15px;
+    margin-top: 10px;
+    outline: 0px;
+}
+
+ QPushButton:hover,
+ QPushButton:focus {
+    background-color: #afafaf;
+    border: 2px solid #777777;
+}
+
+QLabel {
+    color: #111111;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QLabel#heading {
+    font-size: 35px;
+    font: bold large "Aptos";
+    padding-bottom: 25;
+}
+
+QLabel#subheading {
+    font: bold large "Aptos";
+    font-size: 19px;
+}
+
+QLabel#prob {
+    font: bold large "Aptos";
+    font-size: 17px;
+}
+
+QLabel#warns {
+    background-color: #f4f4f4;
+}
+
+QLabel#copyright {
+    font-size: 10px;
+}
+
+QToolButton {
+    background-color: #bfbfbf;
+    color:#333333;
+    font-weight: 600;
+    font: large "Aptos";
+    font-size: 14px;
+}
+
+QLineEdit {
+    background-color: #ffffff;
+    color: #333333;
+    placeholder-color: #213456;
+    font-size: 14px;
+    font: large "Aptos";
+}
+
+QDialog {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+QTextEdit {
+    background-color: #ffffff;
+    color: #333333;
+}
+
