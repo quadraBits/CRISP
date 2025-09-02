@@ -30,7 +30,7 @@ dev_mode = True
 
 
 def resource_path(relative_path):
-    """Returns Path to resource reliably both when executed as .exe and as .py."""
+    # Returns Path to resource reliably both when executed as .exe and as .py
     try:
         base_path = sys._MEIPASS
     except AttributeError:
@@ -375,7 +375,7 @@ class MainWindow(QMainWindow):
 
         jump_button = QToolButton()
         jump_action = QAction()
-        jump_action.triggered.connect(self.jump_to)
+        jump_action.triggered.connect(self.jump_to_start)
         jump_action.setText(" New Input")
         jump_button.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         jump_button.setArrowType(Qt.ArrowType.LeftArrow)
@@ -404,7 +404,7 @@ class MainWindow(QMainWindow):
         prev_ind = self.stacked.currentIndex() - 1
         if prev_ind >= 0: self.stacked.setCurrentIndex(prev_ind)
 
-    def jump_to(self):
+    def jump_to_start(self):
         self.stacked.setCurrentIndex(0)
 
     def scroll_to_bottom(self):

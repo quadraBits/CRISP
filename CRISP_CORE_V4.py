@@ -103,6 +103,7 @@ def norm_prob(x, mu, sd):
         return None
 
 #  Likelihood function
+# TODO: remove call for parameter_table
 def add_likelihood(var_name, value, parameter_table):
     row = parameter_table[parameter_table["metric_vars"] == var_name]
 
@@ -124,6 +125,7 @@ def add_likelihood(var_name, value, parameter_table):
         "prob_f": prob_f
     }
 
+# TODO: remove call for parameter_table
 def consistency_check(individual_posteriors, parameter_table, new_case):
     male_probs = np.array(list(individual_posteriors.values()))
     used_vars = list(individual_posteriors.keys())
@@ -169,14 +171,14 @@ def consistency_check(individual_posteriors, parameter_table, new_case):
     return warning_str
 
 # Makes data frame from dict
+# TODO: data legality check
 def new_single_case(data = {}):
-    # TODO: data legality check
     new_case = pd.DataFrame([data])
     return new_case
 
 # Read cases from an excel file
+# TODO: data legality check
 def new_raw_cases_file(file_path):
-    # TODO: data legality check
     if file_path:
         df = pd.read_excel(file_path)
         print(f"data loaded: {file_path}")
