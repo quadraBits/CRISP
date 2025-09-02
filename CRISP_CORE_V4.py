@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-import math
+import math # only usage was in r.282
 
 # Data entry:
 # Parameters for Bayiesian model creation
@@ -97,10 +97,24 @@ prior_f = 0.5
 # TODO: Make own norm.pdf func, remove scipy import
 def norm_prob(x, mu, sd):
     try:
+        old = norm.pdf(x, loc=mu, scale=sd)
+        new = normpdf(x, mu, sd)
+        print(old)
+        print(new)
+        if old == new:
+            print("works")
+        else:
+            print("doesn't work")
         return norm.pdf(x, loc=mu, scale=sd)
     except Exception as e:
         print(e)
         return None
+
+# Replacement norm.pdf
+def normpdf(x, mu, sd):
+    u = float((x-mu) / abs(sd))
+    y = np.exp(-u * u / 2) / (np.sqrt(2 * np.pi) * abs(sd))
+    return y
 
 #  Likelihood function
 # TODO: remove call for parameter_table
@@ -271,7 +285,7 @@ def calculate_single(raw_data):
 
     plot_vars = [var for var in parameter_table['metric_vars'] if var in single_case.columns]
     n_plots = len(plot_vars)
-    n_rows = math.ceil(n_plots / n_cols)
+    n_rows = int(np.ceil(n_plots / n_cols))
 
     fig, axs = plt.subplots(n_rows, n_cols, figsize=(n_cols * 5, n_rows * 4))
     axs = axs.flatten()

@@ -7,14 +7,15 @@
 import os
 import sys
 from copy import deepcopy
+from pathlib import Path # can be substituted with os.path
 
 import pandas as pd
+
 from PyQt6.QtGui import QAction, QIcon
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, \
     QHBoxLayout, QMainWindow, QFileDialog, QScrollArea, QMessageBox, QToolButton, QStackedLayout, \
-    QDialog, QDialogButtonBox, QFormLayout, QTextEdit  # for graphic ui
+    QDialog, QDialogButtonBox, QFormLayout, QTextEdit
 from PyQt6.QtCore import Qt, QDir
-from pathlib import Path
 
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
