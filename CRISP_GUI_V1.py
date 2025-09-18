@@ -24,7 +24,7 @@ from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 import CRISP_CORE_V4 as crisp
 
 title = "CRISP"
-version = "0.1"
+version = "1.0"
 year = "2025"
 license_type = "GPL-3.0"
 dev_mode = True
@@ -817,3 +817,4 @@ if __name__ == '__main__':
     window = MainWindow()
 
     sys.exit(app.exec())  # event loop start
+
