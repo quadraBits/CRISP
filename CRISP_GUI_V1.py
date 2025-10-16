@@ -10,6 +10,7 @@ from copy import deepcopy
 from pathlib import Path # can be substituted with os.path
 
 import pandas as pd
+import openpyxl
 
 from PyQt6.QtGui import QAction, QIcon
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, \
