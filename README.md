@@ -1,7 +1,7 @@
 # CRISP
 This is the repository for CRISP: Cremated Remains Inference of Sex Probabilities. 
 
-**For easy installation, please download 'CRISP_setup.exe'.**
+**For easy installation, please download 'CRISP_setup.exe' by clicking on 'CRISP_setup.exe' and using the 'raw' download button on the right-hand side.**
 
 It is based on the technology described in *Waltenberger et al., submitted. CRISP: Cremated Remains Inference of Sex Probabilities – A Software for Bayesian Sex Estimation in Human Cremated Remains, Journal, DOI*
 
