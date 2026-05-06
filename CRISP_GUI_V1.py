@@ -25,7 +25,7 @@ from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 import CRISP_CORE_V4 as crisp
 
 title = "CRISP"
-version = "1.0"
+version = "1.0.1"
 year = "2025"
 license_type = "GPL-3.0"
 dev_mode = True
@@ -650,12 +650,15 @@ class MainWindow(QMainWindow):
         # pyinstaller --add-data "manual.pdf;." main.py
 
     def about_popup(self):
-        QMessageBox.information(self, 'About CRISP', 'CRISP: Cremated Remains Inference of Sex Probabilities \nV1.0 '
-                                                     '(publishing date: DD/MM/YYYY)\nSoftware Licence: GPL-3.0\n\nBased'
-                                                     ' on the technology described in: Waltenberger et al., submitted.'
-                                                     ' CRISP: Cremated Remains Inference of Sex Probabilities – A '
-                                                     'Software for Bayesian Sex Estimation in Human Cremated Remains,'
-                                                     ' Journal, DOI\n\nPlease visit the softwares homepage for updates:'
+        QMessageBox.information(self, 'About CRISP', 'CRISP: Cremated Remains Inference of Sex Probabilities \nV1.0.1 '
+                                                     '(publishing date: 06/05/2026)\nSoftware Licence: GPL-3.0\n\nBased'
+                                                     ' on the technology described in: Waltenberger L, '
+                                                     'Beitel S, Bischeri M, Rebay-Salisbury K, Sperduti A, '
+                                                     'Cavazzuti C (2026) CRISP: Cremated remains inference '
+                                                     'of sex probabilities – A software for Bayesian sex '
+                                                     'estimation in human cremated remains. PLoS One 21(5): '
+                                                     'e0346813. https://doi.org/10.1371/journal.pone.0346813\n\n'
+                                                     'Please visit the softwares homepage for updates:'
                                                      ' to https://github.com/quadraBits/CRISP\n\nPlease report any bugs to '
                                                      'crisp.helpdesk@gmail.com\n\nDisclaimer: \nThis software is provided'
                                                      ' "as is", without warranty of any kind, express or implied, '
@@ -671,11 +674,12 @@ class MainWindow(QMainWindow):
                                                      '(University of Vienna)')
 
     def cite_popup(self):
-        QMessageBox.information(self, 'Citation of this Software', 'Please cite this software as follows:\nWaltenberger'
-                                                                   ' et al., submitted. CRISP: Cremated Remains '
-                                                                   'Inference of Sex Probabilities – A Software for '
-                                                                   'Bayesian Sex Estimation in Human Cremated Remains, '
-                                                                   'Journal, DOI')
+        QMessageBox.information(self, 'Citation of this Software', 'Please cite this software as follows:\nWaltenberger L, '
+                                                                   'Beitel S, Bischeri M, Rebay-Salisbury K, Sperduti A, '
+                                                                   'Cavazzuti C (2026) CRISP: Cremated remains inference '
+                                                                   'of sex probabilities – A software for Bayesian sex '
+                                                                   'estimation in human cremated remains. PLoS One 21(5): '
+                                                                   'e0346813. https://doi.org/10.1371/journal.pone.0346813')
 
     def export(self, page_index):
         # Input legality check:
